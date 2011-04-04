@@ -7,6 +7,9 @@ Parts" and has no dependencies. It assumes it will be used an a non-blocking
 context, that is, the module will be extended and messages queued without
 blocking other activity on the page.
 
+If you came here expecting to find a plugin for the Apache web server, try
+[mod_js](http://www.modjs.org/)
+
 ## Usage
 
 Mod.js assumes you've declared an array-like variable 'mod' in the document
