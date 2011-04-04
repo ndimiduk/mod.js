@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Mod.js Test</title>
+
+    <script type="text/javascript">
+      var mod = mod || [];
+      mod.push(['hello']);
+
+      (function() {
+	  var m = document.createElement('script');
+	  var s = document.getElementsByTagName('script')[0];
+	  m.type = 'text/javascript'; m.defer = true; m.async = true;
+	  m.src = '../src/mod.js';
+	  s.parentNode.insertBefore(m,s);
+      })();
+    </script>
+
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
+    <script type="text/javascript">
+      (function($) {
+	  var fn = function() {
+	      var hello = function() {
+		  $(function() {
+		      $('body').append('<p>Hello from mod.js!</p>');
+		  });
+	      };
+
+	      this.hello = hello;
+	  };
+
+	  mod.push([fn]);
+      })(jQuery);
+    </script>
+  </head>
+  <body>
+    <h2>Mod.js</h2>
+    <p>
+      Modular, non-blocking JavaScript.
+    </p>
+  </body>
+</html>
