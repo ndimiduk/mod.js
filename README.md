@@ -72,4 +72,5 @@ Please report bugs and make suggestions using the [github issue tracker](https:/
 ## License
 
 Copyright (c) 2011 Nick Dimiduk
+
 Dual licensed under the MIT and GPL licenses, same as jQuery.
